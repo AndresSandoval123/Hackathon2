@@ -1,6 +1,6 @@
 public class AgendaTelefonica {
 //Limita a 10 contact
-private static final int MAX_CONTACTS = 2;
+private static final int MAX_CONTACTS = 10;
 //Arreglo que almacena los maximos de contact
 private Contacto[] contactos = new Contacto[MAX_CONTACTS];
 //Contador
