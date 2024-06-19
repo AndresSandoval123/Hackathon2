@@ -25,7 +25,7 @@ public class Main {
       switch (command) {
         case "1":
           System.out.println("Ingrese el nombre del contacto:");
-          String nombre = scanner.nextLine();
+          String nombre = scanner.nextLine().toLowerCase();
           System.out.println("Ingrese el número de teléfono del contacto:");
           String numTelefono = scanner.nextLine();
           if (agenda.agregarContacto(new Contacto(nombre, numTelefono))) {
@@ -37,7 +37,7 @@ public class Main {
 
         case "2":
           System.out.println("Ingrese el nombre del contacto a eliminar:");
-          nombre = scanner.nextLine();
+          nombre = scanner.nextLine().toLowerCase();
           if (agenda.elimiContacto(nombre)) {
             System.out.println("Contacto eliminado.");
           } else {
@@ -47,7 +47,7 @@ public class Main {
 
         case "3":
           System.out.println("Ingrese el nombre del contacto a buscar:");
-          nombre = scanner.nextLine();
+          nombre = scanner.nextLine().toLowerCase();
           int index = agenda.bucarContacto(nombre);
           if (index >= 0) {
             Contacto foundContact = agenda.getContacts()[index];
